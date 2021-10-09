@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-09T08:44:39.688Z</updated>
+  <updated>2021-10-09T11:14:20.365Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>my-first-blog</title>
+    <link href="http://example.com/2021/10/09/my-first-blog/"/>
+    <id>http://example.com/2021/10/09/my-first-blog/</id>
+    <published>2021-10-09T11:03:43.000Z</published>
+    <updated>2021-10-09T11:14:20.365Z</updated>
+    
+    <content type="html"><![CDATA[<p>步骤1：打开注册表<br> 步骤2：打开注册表中[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5<br> 步骤3：打开注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer] 将Enabled修改为：1<br>步骤4：win+X打开管理员shell命令行<br>通过net stop w32time 停止服务<br>   net start w32time 启动服务</p><p>检测命令：w32tm /stripchart /computer:ntp_server_address<br>步骤5：添加防火墙规则<br>控制面板—&gt;系统和安全—&gt;windows防火墙—&gt;高级设置—&gt;入站规则（右键）—&gt;新建规则—&gt; 端口 —下一步—-UDP—-特定本地端口：123（不要换别的）<br>一直点下一步，直到下面这个页面名称：NTP，完成；<br>步骤6：开机自启动<br>打开服务<br>设置windows Time服务属性为自动</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;步骤1：打开注册表&lt;br&gt; 步骤2：打开注册表中[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5&lt;br&gt; 步骤3：打</summary>
+      
+    
+    
+    
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

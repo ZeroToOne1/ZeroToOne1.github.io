@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>Hexo</title>
+<title>Tag: C++ | Hexo</title>
 
 <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
@@ -30,7 +30,7 @@
     
 
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/article-exp.css">
+<link rel="stylesheet" href="/css/pages/archive.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
 
@@ -62,7 +62,7 @@
 <![endif]-->
 
 <div id="wrap">
-    <header >
+    <header  style="position: absolute;" >
     <div id="site-meta">
         <a href="/" id="logo">
             <h1 class="title">Hexo</h1>
@@ -141,31 +141,15 @@ title="fork me" target="_blank">Geekaholic</a></p>
 </ul>
 
 
-        <ul id="main">
-    
-
-    
-    
-    
-    
-    
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/2021/10/09/my-first-blog/">
-        <div class="article-img img-ajax" data-src= /img/default-1.jpg>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
+        <div id="main">
+    <div id="post-list">
+        <ul class="archives-post-list">
             
-            <a class="article-title-link" href="/2021/10/09/my-first-blog/">
-                <h2 class="article-title">my-first-blog</h2>
-            </a>
-            
-            <p class="article-content">
-                步骤1：打开注册表 步骤2：打开注册表中[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5 步骤3：打开注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer] 将Enabled修改为：1步骤4：win+X打开管理员shell命令行通过net stop w32time 停止服务   net start w32time 启动服务
-检测命令：w32tm /stripchart /computer:ntp_server_address步骤5：添加防火墙规则控制面板—&gt;系统和安全—&gt;windows防火墙—&...
-            </p>
-            <div class="article-meta">
+            <li class="post-items" _href="/2021/10/09/my-first-blog/">
+                
+                <p class="info">C++</p>
+                <h2 class="post-item-title">my-first-blog</h2>
+                <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -173,15 +157,6 @@ title="fork me" target="_blank">Geekaholic</a></p>
         <span>null</span>
     </span>
     
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            C++
-            
-        </span>
-    </span>
     
     
     <span class="fa-wrap">
@@ -197,81 +172,16 @@ title="fork me" target="_blank">Geekaholic</a></p>
     </span>
     
     
-    <a href="/2021/10/09/my-first-blog/" class="read-article">Read</a>
-    
 </div>
 
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/2021/10/09/hello-world/">
-        <div class="article-img img-ajax" data-src= /img/default-1.jpg>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
+            </li>
             
-            <a class="article-title-link" href="/2021/10/09/hello-world/">
-                <h2 class="article-title">Hello World</h2>
-            </a>
-            
-            <p class="article-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to rem...
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2021/10/09</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="Hello World"
-              data-leadcloud-url="/2021/10/09/hello-world/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-    <a href="/2021/10/09/hello-world/" class="read-article">Read</a>
-    
+        </ul>
+    </div>
 </div>
 
-        </div>
-        
-    </li>
-    
-    
 
-</ul>
+
 
     </div>
     <footer id="footer">
