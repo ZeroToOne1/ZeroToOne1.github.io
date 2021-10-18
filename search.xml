@@ -7,6 +7,7 @@
         <url>http://example.com/2021/10/18/%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA%25E7%25BD%2591%25E7%25BB%259C/</url>
         <content type="html"><![CDATA[<h1 id="通告窗口与接收缓存"><a href="#通告窗口与接收缓存" class="headerlink" title="通告窗口与接收缓存"></a>通告窗口与接收缓存</h1><p>在TCP的配置中，有一个接收缓存的概念，另外在TCP滑动窗口机制中，还有一个接收窗口的概念，毋庸置疑，接收窗口所使用的内存必须分配自接收缓存，因此二者是包容的关系。<br>        但这不是重点，重点是： 接收窗口无法完全占完接收缓存的内存，即接收缓存的内存并不能完全用于接收窗口！Why？<br>        这是因为接收窗口是TCP层的概念，仅仅描述TCP载荷，然而这个载荷之所以可以收到，必须使用一个叫做数据包的载体，在Linux中就是skb，另外为了让协议运行，必须为载荷封装TCP头，IP头，以太头…等等。<br>        我用下图来解释接收缓存以及其和TCP数据包的关系：</p>
 <p><img src="https://img-blog.csdn.net/20161011215053978?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="tcp"></p>
+<p><img src="C:\Users\admin\Desktop\20161011215053978.jpg" alt="20161011215053978"></p>
 ]]></content>
         
         <categories>
