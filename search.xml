@@ -29,6 +29,12 @@
 </ul>
 ]]></content>
         
+        <categories>
+            
+            <category> C++ </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -59,6 +65,12 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
         
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -70,6 +82,12 @@
     
     
     
+    
+    <entry>
+        <title><![CDATA[categories]]></title>
+        <url>http://example.com/categories/index.html</url>
+        <content type="html"></content>
+    </entry>
     
     
 </search>
