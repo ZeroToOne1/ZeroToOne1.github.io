@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>Tag: C++ | ZeroToOne1&#39;s Room</title>
+<title>计算机网络 | ZeroToOne1&#39;s Room</title>
 
 <link rel="alternate" href="/atom.xml" title="ZeroToOne1&#39;s Room" type="application/atom+xml">
 
@@ -30,9 +30,10 @@
     
 
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
 
     <!--script-->
@@ -42,6 +43,23 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+  var admin = "GeekaholicLin";
+  admin = admin.split(",");
+  var gitalk = new Gitalk({
+    clientID: "xxxxx",
+    clientSecret: "xxxxx",
+    repo: "geekaholiclin.github.io",
+    owner: "GeekaholicLin",
+    admin: admin,
+    id: decodeURIComponent(location.pathname),
+    distractionFreeMode: false
+  })
+
+</script>
 
     
     
@@ -147,45 +165,129 @@
 
 
         <div id="main">
-    <div id="post-list">
-        <ul class="archives-post-list">
-            
-            <li class="post-items" _href="/2021/10/09/my-first-blog/">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="计算机网络">
                 
-                <p class="info">C++</p>
-                <h2 class="post-item-title">Windows设置NTP时间</h2>
-                <div class="article-meta">
+                计算机网络
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>C++</span>
+        <span>网络通信</span>
     </span>
     
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            TCP原理
+            
+        </span>
+    </span>
     
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2021/10/09</span>
+        <span class="date-meta ">2021/10/18</span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="Windows设置NTP时间"
-              data-leadcloud-url="/2021/10/09/my-first-blog/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="计算机网络"
+              data-leadcloud-url="/2021/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
 </div>
 
-            </li>
             
-        </ul>
+            
+        </div>
+        
+        <div id="post-body">
+            <h1 id="通告窗口与接收缓存"><a href="#通告窗口与接收缓存" class="headerlink" title="通告窗口与接收缓存"></a>通告窗口与接收缓存</h1><p>在TCP的配置中，有一个接收缓存的概念，另外在TCP滑动窗口机制中，还有一个接收窗口的概念，毋庸置疑，接收窗口所使用的内存必须分配自接收缓存，因此二者是包容的关系。<br>        但这不是重点，重点是： 接收窗口无法完全占完接收缓存的内存，即接收缓存的内存并不能完全用于接收窗口！Why？<br>        这是因为接收窗口是TCP层的概念，仅仅描述TCP载荷，然而这个载荷之所以可以收到，必须使用一个叫做数据包的载体，在Linux中就是skb，另外为了让协议运行，必须为载荷封装TCP头，IP头，以太头…等等。<br>        我用下图来解释接收缓存以及其和TCP数据包的关系：</p>
+<p><img src="https://img-blog.csdn.net/20161011215053978?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="tcp"></p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20181007%2F18%2F1538907605-WyEqaotzZc.jpg&refer=http%3A%2F%2Fimage.biaobaiju.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637061175&t=bf5c02ac1c1f650e8822e02c1252884d" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">敢不敢点我嗨皮一下？</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">LPL加油</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  Author:
+                  
+                    
+                    <a href="/about.html">liuyx</a>
+                </li>
+                
+                <li>Published Date: <span>2021-10-18  21:59:24</span></li>
+                
+                <li>Updated Date: <span>2021-10-18  22:02:01</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                    <a href="/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a>
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                    <a href="/tags/TCP%E5%8E%9F%E7%90%86/">TCP原理</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="https://game.gtimg.cn/images/lpl/act/a20210918s11/page4-rng.jpg" alt="RNG" class="donate-img">
+                
+                <img src="https://game.gtimg.cn/images/lpl/act/a20210918s11/page4-edg.jpg" alt="EDG" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/2021/10/09/my-first-blog/" class="next-post fa">Windows设置NTP时间</a>
+        
     </div>
+    
+    <div id="comments">
+        
+
+<script>
+  gitalk.render("comments");
+</script>
+
+
+
+    </div>
+    
 </div>
-
-
 
 
     </div>
@@ -222,8 +324,14 @@
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -241,6 +349,8 @@
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E5%91%8A%E7%AA%97%E5%8F%A3%E4%B8%8E%E6%8E%A5%E6%94%B6%E7%BC%93%E5%AD%98"><span class="toc-number">1.</span> <span class="toc-text">通告窗口与接收缓存</span></a></li></ol>
 
 
     
