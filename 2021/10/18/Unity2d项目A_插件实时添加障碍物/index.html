@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>计算机网络 | ZeroToOne1&#39;s Room</title>
+<title>ZeroToOne1&#39;s Room</title>
 
 <link rel="alternate" href="/atom.xml" title="ZeroToOne1&#39;s Room" type="application/atom+xml">
 
@@ -168,9 +168,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="计算机网络">
+            <h1 id="">
                 
-                计算机网络
+                NO Title!
                 
             </h1>
             <div class="article-meta">
@@ -178,7 +178,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>网络通信</span>
+        <span>null</span>
     </span>
     
     
@@ -186,7 +186,7 @@
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            TCP原理
+            null
             
         </span>
     </span>
@@ -200,8 +200,8 @@
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="计算机网络"
-              data-leadcloud-url="/2021/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title=""
+              data-leadcloud-url="/2021/10/18/Unity2d%E9%A1%B9%E7%9B%AEA_%E6%8F%92%E4%BB%B6%E5%AE%9E%E6%97%B6%E6%B7%BB%E5%8A%A0%E9%9A%9C%E7%A2%8D%E7%89%A9/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -212,9 +212,14 @@
         </div>
         
         <div id="post-body">
-            <h1 id="通告窗口与接收缓存"><a href="#通告窗口与接收缓存" class="headerlink" title="通告窗口与接收缓存"></a>通告窗口与接收缓存</h1><p>在TCP的配置中，有一个接收缓存的概念，另外在TCP滑动窗口机制中，还有一个接收窗口的概念，毋庸置疑，接收窗口所使用的内存必须分配自接收缓存，因此二者是包容的关系。<br>        但这不是重点，重点是： 接收窗口无法完全占完接收缓存的内存，即接收缓存的内存并不能完全用于接收窗口！Why？<br>        这是因为接收窗口是TCP层的概念，仅仅描述TCP载荷，然而这个载荷之所以可以收到，必须使用一个叫做数据包的载体，在Linux中就是skb，另外为了让协议运行，必须为载荷封装TCP头，IP头，以太头…等等。<br>        我用下图来解释接收缓存以及其和TCP数据包的关系：</p>
-<p><img src="https://img-blog.csdn.net/20161011215053978?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="tcp"></p>
-<p><img src="C:\Users\admin\Desktop\20161011215053978.jpg" alt="20161011215053978"></p>
+            <h1 id="Unity2d项目A-插件实时添加障碍物"><a href="#Unity2d项目A-插件实时添加障碍物" class="headerlink" title="Unity2d项目A*插件实时添加障碍物"></a>Unity2d项目A*插件实时添加障碍物</h1><h2 id="一、实现步骤"><a href="#一、实现步骤" class="headerlink" title="一、实现步骤"></a>一、实现步骤</h2><p>   可以去B站搜教程，详细的就不说了，<br>   主要是最近在做一个塔防迷宫，<br>   敌人得实现自动寻路。<strong>这里有一个网上搜不到的问题——实时添加障碍物。</strong></p>
+<h2 id="二、个人遇到的问题"><a href="#二、个人遇到的问题" class="headerlink" title="二、个人遇到的问题"></a>二、个人遇到的问题</h2><p> 主要是指导老师说喜欢玩塔防迷宫，所以我们小组做一个类似明日方舟的塔防游戏，不过得加入迷宫元素，就是在宽阔的地图上放置干员来决定怪物的走向。<br> 使用Astart Pathfinding project插件，前期我很方便的实现了让敌人自动寻路到指定的地点。但令人头疼的是干员(=防守人员)实时放置到地图中的时候，正在行进的怪物不会避让。也就是Astart算法只在开始的时候扫描了一遍地图中的网格，以后就没有实时扫描来监测和生成新的网格。</p>
+<h2 id="三、解决实时添加障碍物的办法"><a href="#三、解决实时添加障碍物的办法" class="headerlink" title="三、解决实时添加障碍物的办法"></a>三、解决实时添加障碍物的办法</h2><p> 最后在A* Pathfinding Project官方网站上看文档才想到解决方案。<br><em>当你在B站上看教程，把Astart算法运用到你的项目后，你想实现实时添加障碍物的功能时，你需要用下面一条语句：</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AstarPath.active.Scan();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这条语句的作用是：<strong>重新计算所有的图(You can recalculate all graphs)</strong><br>将这条语句放在你实现<strong>往地图中添加障碍物</strong>功能的脚本中，具体位置应该是你在实例化一个障碍物的后面加上这一条语句。<br>以下是我们的项目中实现实时扫描图的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="function"><span class="title">canPlaceMonster</span>(<span class="params"></span>)</span></span><br><span class="line">&#123; </span><br><span class="line">    monster = (GameObject)Instantiate(GameManagerBehavior.Instance.ClickedBtn.TowerPrefab, transform.position, Quaternion.identity);</span><br><span class="line">    AstarPath.active.Scan();<span class="comment">//实时更新扫描网格，使得可以实时添加障碍物</span></span><br><span class="line">    AudioSource audioSource = gameObject.GetComponent&lt;AudioSource&gt;();</span><br><span class="line">    audioSource.PlayOneShot(audioSource.clip);</span><br><span class="line">    Hover.Instance.Deactivate();</span><br><span class="line">    GameManagerBehavior.Instance.BuyMonster();</span><br><span class="line">    gameManager.Gold -= monster.GetComponent&lt;MonsterData&gt;().CurrentLevel.cost;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>只添加做注释的那条语句，然后你可以开始运行你的项目，随时向地图添加障碍物，敌人会实时的避开你放置的障碍物。<br><strong>运用这些原理你可以做一个迷宫类的塔防，还可以让玩家先搭建一个地图然后开始塔防游戏</strong>。<br><strong>如果想知道我们项目的全部内容或者添加A*插件的步骤，就看点赞的伙伴们多不多了。</strong></p>
 
         </div>
         <div id="post-footer">
@@ -236,20 +241,16 @@
                     <a href="/about.html">liuyx</a>
                 </li>
                 
-                <li>发表日期: <span>2021-10-18  21:59:24</span></li>
+                <li>发表日期: <span>2021-10-18  22:13:08</span></li>
                 
-                <li>最后编辑日期: <span>2021-10-18  22:08:40</span></li>
+                <li>最后编辑日期: <span>2021-10-18  22:12:23</span></li>
                 
                 <li class="post-category">
                     文章分类:
                     
-                    <a href="/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a>
-                    
                 </li>
                 <li class="post-tags">
                     文章标签:
-                    
-                    <a href="/tags/TCP%E5%8E%9F%E7%90%86/">TCP原理</a>
                     
                 </li>
                 
@@ -272,10 +273,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2021/10/18/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86LR1%E5%88%86%E6%9E%90%E6%B3%95/" class="pre-post fa fa-caret-left"></a>
         
-        
-        <a href="/2021/10/09/my-first-blog/" class="next-post fa">Windows设置NTP时间</a>
+        <a href="/2021/10/18/GIT%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8F%90%E4%BA%A4%E5%88%B0gihub/" class="next-post fa"></a>
         
     </div>
     
@@ -353,7 +352,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E5%91%8A%E7%AA%97%E5%8F%A3%E4%B8%8E%E6%8E%A5%E6%94%B6%E7%BC%93%E5%AD%98"><span class="toc-number">1.</span> <span class="toc-text">通告窗口与接收缓存</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Unity2d%E9%A1%B9%E7%9B%AEA-%E6%8F%92%E4%BB%B6%E5%AE%9E%E6%97%B6%E6%B7%BB%E5%8A%A0%E9%9A%9C%E7%A2%8D%E7%89%A9"><span class="toc-number">1.</span> <span class="toc-text">Unity2d项目A*插件实时添加障碍物</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.1.</span> <span class="toc-text">一、实现步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%B8%AA%E4%BA%BA%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">二、个人遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%A7%A3%E5%86%B3%E5%AE%9E%E6%97%B6%E6%B7%BB%E5%8A%A0%E9%9A%9C%E7%A2%8D%E7%89%A9%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">三、解决实时添加障碍物的办法</span></a></li></ol></li></ol>
 
 
     

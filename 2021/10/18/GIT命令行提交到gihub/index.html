@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>归档：2021/10 | ZeroToOne1&#39;s Room</title>
+<title>ZeroToOne1&#39;s Room</title>
 
 <link rel="alternate" href="/atom.xml" title="ZeroToOne1&#39;s Room" type="application/atom+xml">
 
@@ -30,9 +30,10 @@
     
 
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
 
     <!--script-->
@@ -42,6 +43,23 @@
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+  var admin = "GeekaholicLin";
+  admin = admin.split(",");
+  var gitalk = new Gitalk({
+    clientID: "xxxxx",
+    clientSecret: "xxxxx",
+    repo: "geekaholiclin.github.io",
+    owner: "GeekaholicLin",
+    admin: admin,
+    id: decodeURIComponent(location.pathname),
+    distractionFreeMode: false
+  })
+
+</script>
 
     
     
@@ -146,54 +164,16 @@
 </ul>
 
 
-        
-<div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-        
-      <li class="post-items" _href="/2021/10/18/Unity2d%E9%A1%B9%E7%9B%AEA_%E6%8F%92%E4%BB%B6%E5%AE%9E%E6%97%B6%E6%B7%BB%E5%8A%A0%E9%9A%9C%E7%A2%8D%E7%89%A9/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title"></h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/18</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title=""
-              data-leadcloud-url="/2021/10/18/Unity2d%E9%A1%B9%E7%9B%AEA_%E6%8F%92%E4%BB%B6%E5%AE%9E%E6%97%B6%E6%B7%BB%E5%8A%A0%E9%9A%9C%E7%A2%8D%E7%89%A9/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
 
-      </li>
-        
-      <li class="post-items" _href="/2021/10/18/GIT%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8F%90%E4%BA%A4%E5%88%B0gihub/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title"></h2>
-          <div class="article-meta">
+            <h1 id="">
+                
+                NO Title!
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -214,7 +194,7 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/18</span>
+        <span class="date-meta ">2021/10/18</span>
     </span>
     
     
@@ -227,207 +207,95 @@
     
 </div>
 
-      </li>
+            
+            
+        </div>
         
-      <li class="post-items" _href="/2021/10/18/%E8%AE%A1%E7%BD%91%E5%85%B3%E4%BA%8E%E9%9D%9E%E6%AD%A3%E5%B8%B8%E8%BF%9E%E6%8E%A5%E9%87%8A%E6%94%BE%E6%80%BB%E7%BB%93/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title"></h2>
-          <div class="article-meta">
+        <div id="post-body">
+            <p>title: GIT命令行提交到gihub<br>date:<br>tags: 技术经验积累<br>categories: GIT命令</p>
+<p>﻿### GIT命令行提交到gihub</p>
+<p>git init</p>
+<p>检查加密传输是否设置：ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>git pull origin master<br>$ git remote add origin git@github:你的github远程地址.git<br>输入命令行<br>`$ git add .<br>//注意add后面是有”.“的，而且和add之间有一个空格<br>$ git commit -m “提交说明”</p>
+<p>$ git push origin master</p>
+<p>移除原来设置的远程地址：git remote rm origin<br>再重新用git remote add origin git@github:你的github远程地址.git设置再重复上述提交步骤。</p>
+<h3 id="使用git-LFS提交大文件"><a href="#使用git-LFS提交大文件" class="headerlink" title="使用git LFS提交大文件"></a>使用git LFS提交大文件</h3><p>git lfs track “*.zip”<br>git add .gitattributes<br>cat .gitattributes  #自动生成的文件，需一并提交到 Git，否则 Clone 项目的时候 Git LFS 不起作用</p>
+<p>git add 提交文件名<br>git commit -m ‘xxx’<br>git push </p>
+<p>删除提交记录：<br>git log<br>得出记录名字</p>
+<p>git reset –hard 记录ID</p>
+<p>git push origin HEAD –force</p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20181007%2F18%2F1538907605-WyEqaotzZc.jpg&refer=http%3A%2F%2Fimage.biaobaiju.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637061175&t=bf5c02ac1c1f650e8822e02c1252884d" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">敢不敢点我嗨皮一下？</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">LPL加油</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  作者:
+                  
+                    
+                    <a href="/about.html">liuyx</a>
+                </li>
+                
+                <li>发表日期: <span>2021-10-18  22:13:08</span></li>
+                
+                <li>最后编辑日期: <span>2021-10-18  22:14:53</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="https://game.gtimg.cn/images/lpl/act/a20210918s11/page4-rng.jpg" alt="RNG" class="donate-img">
+                
+                <img src="https://game.gtimg.cn/images/lpl/act/a20210918s11/page4-edg.jpg" alt="EDG" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2021/10/18/Unity2d%E9%A1%B9%E7%9B%AEA_%E6%8F%92%E4%BB%B6%E5%AE%9E%E6%97%B6%E6%B7%BB%E5%8A%A0%E9%9A%9C%E7%A2%8D%E7%89%A9/" class="pre-post fa fa-caret-left"></a>
+        
+        
+        <a href="/2021/10/18/%E8%AE%A1%E7%BD%91%E5%85%B3%E4%BA%8E%E9%9D%9E%E6%AD%A3%E5%B8%B8%E8%BF%9E%E6%8E%A5%E9%87%8A%E6%94%BE%E6%80%BB%E7%BB%93/" class="next-post fa"></a>
+        
+    </div>
     
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/18</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title=""
-              data-leadcloud-url="/2021/10/18/%E8%AE%A1%E7%BD%91%E5%85%B3%E4%BA%8E%E9%9D%9E%E6%AD%A3%E5%B8%B8%E8%BF%9E%E6%8E%A5%E9%87%8A%E6%94%BE%E6%80%BB%E7%BB%93/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
+    <div id="comments">
+        
+
+<script>
+  gitalk.render("comments");
+</script>
+
+
+
+    </div>
     
 </div>
-
-      </li>
-        
-      <li class="post-items" _href="/2021/10/18/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86LR1%E5%88%86%E6%9E%90%E6%B3%95/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title"></h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>null</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/18</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title=""
-              data-leadcloud-url="/2021/10/18/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86LR1%E5%88%86%E6%9E%90%E6%B3%95/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2021/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title">计算机网络</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>网络通信</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            TCP原理
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/18</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="计算机网络"
-              data-leadcloud-url="/2021/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2021/10/09/my-first-blog/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title">Windows设置NTP时间</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>C++</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            C++
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/09</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="Windows设置NTP时间"
-              data-leadcloud-url="/2021/10/09/my-first-blog/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2021/10/09/hello-world/">
-        <p class="info">2021</p>
-        <h2 class="post-item-title">自我简介</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>生活</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            其他
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/09</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="自我简介"
-              data-leadcloud-url="/2021/10/09/hello-world/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-    </ul>
-  </div>
-</div>
-
 
 
     </div>
@@ -464,8 +332,14 @@
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -483,6 +357,8 @@
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8git-LFS%E6%8F%90%E4%BA%A4%E5%A4%A7%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">使用git LFS提交大文件</span></a></li></ol>
 
 
     

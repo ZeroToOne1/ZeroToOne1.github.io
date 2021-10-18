@@ -3,6 +3,74 @@
     
     
     <entry>
+        <title></title>
+        <url>http://example.com/2021/10/18/Unity2d%25E9%25A1%25B9%25E7%259B%25AEA_%25E6%258F%2592%25E4%25BB%25B6%25E5%25AE%259E%25E6%2597%25B6%25E6%25B7%25BB%25E5%258A%25A0%25E9%259A%259C%25E7%25A2%258D%25E7%2589%25A9/</url>
+        <content type="html"><![CDATA[<h1 id="Unity2d项目A-插件实时添加障碍物"><a href="#Unity2d项目A-插件实时添加障碍物" class="headerlink" title="Unity2d项目A*插件实时添加障碍物"></a>Unity2d项目A*插件实时添加障碍物</h1><h2 id="一、实现步骤"><a href="#一、实现步骤" class="headerlink" title="一、实现步骤"></a>一、实现步骤</h2><p>   可以去B站搜教程，详细的就不说了，<br>   主要是最近在做一个塔防迷宫，<br>   敌人得实现自动寻路。<strong>这里有一个网上搜不到的问题——实时添加障碍物。</strong></p>
+<h2 id="二、个人遇到的问题"><a href="#二、个人遇到的问题" class="headerlink" title="二、个人遇到的问题"></a>二、个人遇到的问题</h2><p> 主要是指导老师说喜欢玩塔防迷宫，所以我们小组做一个类似明日方舟的塔防游戏，不过得加入迷宫元素，就是在宽阔的地图上放置干员来决定怪物的走向。<br> 使用Astart Pathfinding project插件，前期我很方便的实现了让敌人自动寻路到指定的地点。但令人头疼的是干员(=防守人员)实时放置到地图中的时候，正在行进的怪物不会避让。也就是Astart算法只在开始的时候扫描了一遍地图中的网格，以后就没有实时扫描来监测和生成新的网格。</p>
+<h2 id="三、解决实时添加障碍物的办法"><a href="#三、解决实时添加障碍物的办法" class="headerlink" title="三、解决实时添加障碍物的办法"></a>三、解决实时添加障碍物的办法</h2><p> 最后在A* Pathfinding Project官方网站上看文档才想到解决方案。<br><em>当你在B站上看教程，把Astart算法运用到你的项目后，你想实现实时添加障碍物的功能时，你需要用下面一条语句：</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AstarPath.active.Scan();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这条语句的作用是：<strong>重新计算所有的图(You can recalculate all graphs)</strong><br>将这条语句放在你实现<strong>往地图中添加障碍物</strong>功能的脚本中，具体位置应该是你在实例化一个障碍物的后面加上这一条语句。<br>以下是我们的项目中实现实时扫描图的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="function"><span class="title">canPlaceMonster</span>(<span class="params"></span>)</span></span><br><span class="line">&#123; </span><br><span class="line">    monster = (GameObject)Instantiate(GameManagerBehavior.Instance.ClickedBtn.TowerPrefab, transform.position, Quaternion.identity);</span><br><span class="line">    AstarPath.active.Scan();<span class="comment">//实时更新扫描网格，使得可以实时添加障碍物</span></span><br><span class="line">    AudioSource audioSource = gameObject.GetComponent&lt;AudioSource&gt;();</span><br><span class="line">    audioSource.PlayOneShot(audioSource.clip);</span><br><span class="line">    Hover.Instance.Deactivate();</span><br><span class="line">    GameManagerBehavior.Instance.BuyMonster();</span><br><span class="line">    gameManager.Gold -= monster.GetComponent&lt;MonsterData&gt;().CurrentLevel.cost;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>只添加做注释的那条语句，然后你可以开始运行你的项目，随时向地图添加障碍物，敌人会实时的避开你放置的障碍物。<br><strong>运用这些原理你可以做一个迷宫类的塔防，还可以让玩家先搭建一个地图然后开始塔防游戏</strong>。<br><strong>如果想知道我们项目的全部内容或者添加A*插件的步骤，就看点赞的伙伴们多不多了。</strong></p>
+]]></content>
+        
+        
+    </entry>
+    
+    <entry>
+        <title></title>
+        <url>http://example.com/2021/10/18/GIT%25E5%2591%25BD%25E4%25BB%25A4%25E8%25A1%258C%25E6%258F%2590%25E4%25BA%25A4%25E5%2588%25B0gihub/</url>
+        <content type="html"><![CDATA[<p>title: GIT命令行提交到gihub<br>date:<br>tags: 技术经验积累<br>categories: GIT命令</p>
+<p>﻿### GIT命令行提交到gihub</p>
+<p>git init</p>
+<p>检查加密传输是否设置：ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>git pull origin master<br>$ git remote add origin git@github:你的github远程地址.git<br>输入命令行<br>`$ git add .<br>//注意add后面是有”.“的，而且和add之间有一个空格<br>$ git commit -m “提交说明”</p>
+<p>$ git push origin master</p>
+<p>移除原来设置的远程地址：git remote rm origin<br>再重新用git remote add origin git@github:你的github远程地址.git设置再重复上述提交步骤。</p>
+<h3 id="使用git-LFS提交大文件"><a href="#使用git-LFS提交大文件" class="headerlink" title="使用git LFS提交大文件"></a>使用git LFS提交大文件</h3><p>git lfs track “*.zip”<br>git add .gitattributes<br>cat .gitattributes  #自动生成的文件，需一并提交到 Git，否则 Clone 项目的时候 Git LFS 不起作用</p>
+<p>git add 提交文件名<br>git commit -m ‘xxx’<br>git push </p>
+<p>删除提交记录：<br>git log<br>得出记录名字</p>
+<p>git reset –hard 记录ID</p>
+<p>git push origin HEAD –force</p>
+]]></content>
+        
+        
+    </entry>
+    
+    <entry>
+        <title></title>
+        <url>http://example.com/2021/10/18/%25E8%25AE%25A1%25E7%25BD%2591%25E5%2585%25B3%25E4%25BA%258E%25E9%259D%259E%25E6%25AD%25A3%25E5%25B8%25B8%25E8%25BF%259E%25E6%258E%25A5%25E9%2587%258A%25E6%2594%25BE%25E6%2580%25BB%25E7%25BB%2593/</url>
+        <content type="html"><![CDATA[<h1 id="TCP连接释放请求过程（4次挥手）"><a href="#TCP连接释放请求过程（4次挥手）" class="headerlink" title="TCP连接释放请求过程（4次挥手）"></a>TCP连接释放请求过程（4次挥手）</h1><p>1.A向B发起连接释放请求<br>2.B向A发出请求确认报文(此时A已单方面关闭TCP连接)<br>3.B发送完自己的数据后，再向A发送连接释放确认报文<br>4.A收到B的确认报文后，再想A发出应答确认报文。</p>
+<h2 id="非正常连接释放情况"><a href="#非正常连接释放情况" class="headerlink" title="非正常连接释放情况"></a>非正常连接释放情况</h2><ol>
+<li>A/B同时发送连接释放请求，又同时发出连接释放确认报文 .   <pre><code>此时我认为A、B都发送完自己的数据，A、B互相向对方发出连接释放确认报文，表明A、B都释放了TCP连接。
+</code></pre>
+</li>
+<li>B向A发送完最后的数据后，向A发送的最后一次连接释放确认报文丢失。       <pre><code>由于设置了TIME_WAIT时间，A会确保有足够的时间收到B重复的连接释放确认报文，如果A还没有收到确认报文，便会启动2MSL计时器，直到双方通信进入关闭状态。
+</code></pre>
+</li>
+<li>B已经确认A的连接释放请求后，又收到A重复的连接释放请求。<pre><code> 此时B可能再次同意A的连接释放请求，B向A再次发送同样的确认号。
+</code></pre>
+</li>
+<li>B在向A发送最后的数据时收到A迟到的连接释放请求。<br>   此时B会再次确认A的释放请求，然后向A发送最后的数据。5. A/B已经释放连接，但B又收到A重复的连接释放请求。   B收到A重复的连接释放请求后，B向A发送确认报文但是确认号是不正确的，A收到后会拒绝B的确认报文，B也拒绝A的连接释放请求。<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>在TCP连接释放过程中，建立的TIME_WAIT必须等待2MSL时间，这样避免了可能出现的不正常释放情况。TIME_WAIT确保有足够的时间让对端收到了ACK，如果被动关闭的那方没有收到ACK，就会触发被动端重发FIN。因为最后一次确认应答ACK报文段很有可能丢失，此时被动关闭方会重复这个FIN+ACK报文段。在这等待的2MSL时间被主动关闭方重新收到这个被动关闭方重发的FIN+ACK报文段，因此，主动关闭方会重新发送确认应答信息，从而重新启动2MSL计时器，直到通信双方都进入CLOSED状态。如果主动关闭方在TIME_WAIT状态不等待一段时间就直接释放连接并进入CLOSED状态，那么主动关闭方无法收到来自被动关闭方重发的FIN+ACK报文段，也就不会再发送一次确认ACK报文段，因此被动关闭方就无法正常地进入CLOSED状态。其次，在连接处于2MSL等待时，任何迟到的报文段将被丢弃，因为处于2MSL等待的，所以连接在这段时间内将不能被再用，这样就可以使下一个新的连接中不会出现这种旧的连接以前延迟的报文段。</li>
+</ol>
+]]></content>
+        
+        
+    </entry>
+    
+    <entry>
+        <title></title>
+        <url>http://example.com/2021/10/18/%25E7%25BC%2596%25E8%25AF%2591%25E5%258E%259F%25E7%2590%2586LR1%25E5%2588%2586%25E6%259E%2590%25E6%25B3%2595/</url>
+        <content type="html"><![CDATA[<h1 id="编译原理实验报告"><a href="#编译原理实验报告" class="headerlink" title="编译原理实验报告"></a>编译原理实验报告</h1><h2 id="开发工具：JAVA10"><a href="#开发工具：JAVA10" class="headerlink" title="开发工具：JAVA10"></a>开发工具：JAVA10</h2><h2 id="开发环境：Eclipse-19-03版"><a href="#开发环境：Eclipse-19-03版" class="headerlink" title="开发环境：Eclipse 19.03版"></a>开发环境：Eclipse 19.03版</h2><h2 id="写代码体会"><a href="#写代码体会" class="headerlink" title="写代码体会"></a>写代码体会</h2><p>  <em>首先第三次实验验收不尽人意，老师就大致浏览了一遍就验收完了，自己写了3，4天的代码，他问都不问，我真的服！</em><br>让我们回到点子上，说到LR1分析法，我大致整理一下求项目集族的算法思想，其实跟书上的思路差不多。现整理一下写分析器需要解决的问题：<br> 1.首先是解决如何表示文法的项目，就是选择<strong>数据结构</strong>；<br> 2.     其次，如何将文法的全部项目用什么形式表示出来；<br> 3. 构造怎样的图形界面将项目集族表示出来；<br> 就自己而言就这些问题了，其实做实验二的图形界面已经做出来了，我沿用了实验二的图形界面。</p>
+<h2 id="构思"><a href="#构思" class="headerlink" title="构思"></a>构思</h2><p> 实验给的文法：<br> 0：S-&gt;E<br> 1：E-&gt;E+T<br> 2：T-&gt;F<br> 3：F-&gt;(E)<br> 4：F-&gt;i<br> 文法的项目：S-&gt;.E   S-&gt;E.   E-&gt;.E+T  E-&gt;E.+T等等。<br>我一开始想的是将这些项目保存在一个二维数组里面，比如S-&gt;.E是编号为0的产生式子，且点号在箭头右边第0个位置，所以将它保存在String数组a[0][0],内容就是产生式S-&gt;E，但是写到后面发现展望符的存储没法解决，并且String数组的长度是固定的，在逐次求出项目集时容易遇到空指针的问题。<br>之后想到了用一对整数+展望符表示，第一个整数表示产生式的编号，第二个整数表示点号位置。考虑到是将求到的项目集合不断的加到数组里面，所以用arrayList<String>数组表示。<br>算法思想：<br><img src="https://img-blog.csdnimg.cn/20191101223902942.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3plcm90b29uZTE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="求项目的闭包-CLOSURE"><a href="#求项目的闭包-CLOSURE" class="headerlink" title="求项目的闭包(CLOSURE)"></a>求项目的闭包(CLOSURE)</h2><p>//存储每个状态对应的项目集合<br>arrayList a = new arrayList<String>();<br>a = CLOSUE();  //求出初态的项目集<br>for 遍历a中的每一个元素<br>     for 文法的每个符号<br>         if  找到</p>
+<h2 id="GO-函数"><a href="#GO-函数" class="headerlink" title="GO()函数"></a>GO()函数</h2>]]></content>
+        
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[计算机网络]]></title>
         <url>http://example.com/2021/10/18/%25E8%25AE%25A1%25E7%25AE%2597%25E6%259C%25BA%25E7%25BD%2591%25E7%25BB%259C/</url>
         <content type="html"><![CDATA[<h1 id="通告窗口与接收缓存"><a href="#通告窗口与接收缓存" class="headerlink" title="通告窗口与接收缓存"></a>通告窗口与接收缓存</h1><p>在TCP的配置中，有一个接收缓存的概念，另外在TCP滑动窗口机制中，还有一个接收窗口的概念，毋庸置疑，接收窗口所使用的内存必须分配自接收缓存，因此二者是包容的关系。<br>        但这不是重点，重点是： 接收窗口无法完全占完接收缓存的内存，即接收缓存的内存并不能完全用于接收窗口！Why？<br>        这是因为接收窗口是TCP层的概念，仅仅描述TCP载荷，然而这个载荷之所以可以收到，必须使用一个叫做数据包的载体，在Linux中就是skb，另外为了让协议运行，必须为载荷封装TCP头，IP头，以太头…等等。<br>        我用下图来解释接收缓存以及其和TCP数据包的关系：</p>
