@@ -90,9 +90,7 @@
     <i class="fa fa-bell-o"></i>
     <div>
         
-<p>主题ylion v0.0.0版本即将上线，敬请期待~！
-主题作者：<a href="https://github.com/GeekaholicLin"
-title="fork me" target="_blank">Geekaholic</a></p>
+<p>欢迎来到ZeroToOne1的博客空间！</p>
     </div>
 </li>
 
@@ -122,7 +120,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
   <h3 class="fa fa-tags widget-title">Tag Cloud</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/C/" style="font-size: 0.14rem; color: #69c">C++</a>
+      <a href="/tags/C/" style="font-size: 0.14rem; color: #69c">C++</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 0.14rem; color: #69c">其他</a>
   </div>
 </li>
 
@@ -154,18 +152,28 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     
     <li  class="article-excerpt-wrap " _href = "/2021/10/09/my-first-blog/">
-        <div class="article-img img-ajax" data-src= /img/default-1.jpg>
+        <div class="article-img img-ajax" data-src= https://img0.baidu.com/it/u=808989156,1923249855&fm=26&fmt=auto>
            <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
         </div>
         <div class="article-excerpt">
             
             <a class="article-title-link" href="/2021/10/09/my-first-blog/">
-                <h2 class="article-title">my-first-blog</h2>
+                <h2 class="article-title">Windows设置NTP时间</h2>
             </a>
             
             <p class="article-content">
-                步骤1：打开注册表 步骤2：打开注册表中[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5 步骤3：打开注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer] 将Enabled修改为：1步骤4：win+X打开管理员shell命令行通过net stop w32time 停止服务   net start w32time 启动服务
-检测命令：w32tm /stripchart /computer:ntp_server_address步骤5：添加防火墙规则控制面板—&gt;系统和安全—&gt;windows防火墙—&...
+                
+步骤1：打开注册表，WIN+R打开搜索框，输入regedit
+
+
+步骤2：打开注册表中           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5
+
+步骤3：打开注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer] 将Enabled修改为：1 
+
+步骤4：win+X打开管理员shell命令行 
+       通过net stop w32time 停止服务
+       net start w32time 启动服务
+       检测命令：w32tm /stripchart /computer:...
             </p>
             <div class="article-meta">
     
@@ -194,7 +202,7 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="my-first-blog"
+        <span class="hits hits-meta " data-leadcloud-title="Windows设置NTP时间"
               data-leadcloud-url="/2021/10/09/my-first-blog/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
@@ -209,18 +217,21 @@ title="fork me" target="_blank">Geekaholic</a></p>
     
     
     <li  class="article-excerpt-wrap " _href = "/2021/10/09/hello-world/">
-        <div class="article-img img-ajax" data-src= http://XXXX.example.jpg>
+        <div class="article-img img-ajax" data-src= https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202004%2F16%2F20200416015655_zmbwp.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637062946&t=300c692a402f1de96a39d8ec3b78ce5f>
            <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
         </div>
         <div class="article-excerpt">
             
             <a class="article-title-link" href="/2021/10/09/hello-world/">
-                <h2 class="article-title">Hello World</h2>
+                <h2 class="article-title">自我简介</h2>
             </a>
             
             <p class="article-content">
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+                欢迎来到我的空间，职业：码农，主要记录自己的学习生活，写写博客，总结一下所学的经验和知识。
+主题是引用这位的Geekaholic。
+期待世界赛，LPL重铸荣光。
+
+HEXO 使用教程Create a new post1$ hexo new &quot;My New Post&quot;
 
 More info: Writing
 Run server1$ hexo server
@@ -229,7 +240,10 @@ More info: Server
 Generate static files1$ hexo generate
 
 More info: Generating
-Deploy to rem...
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+
             </p>
             <div class="article-meta">
     
@@ -244,7 +258,7 @@ Deploy to rem...
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            null
+            其他
             
         </span>
     </span>
@@ -258,7 +272,7 @@ Deploy to rem...
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="Hello World"
+        <span class="hits hits-meta " data-leadcloud-title="自我简介"
               data-leadcloud-url="/2021/10/09/hello-world/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
@@ -288,7 +302,7 @@ Deploy to rem...
     
     <div>
         
-        <a href="/" class="copyright-links">lyx</a>&copy;2015 - 2021.All Rights
+        <a href="/" class="copyright-links">liuyx</a>&copy;2015 - 2021.All Rights
         Reserved.
     </div>
     <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
@@ -320,7 +334,7 @@ Deploy to rem...
             <div class="input-wrap focus">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input id="search-input" autofocus autocomplete="off" type="text"
-                       placeholder="search this website..."/>
+                       placeholder="搜索网站内容..."/>
             </div>
             <ul id="search-result">
                 <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>

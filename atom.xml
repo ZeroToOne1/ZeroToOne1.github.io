@@ -6,29 +6,31 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-09T11:14:20.365Z</updated>
+  <updated>2021-10-17T11:30:08.387Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>lyx</name>
+    <name>liuyx</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>my-first-blog</title>
+    <title>Windows设置NTP时间</title>
     <link href="http://example.com/2021/10/09/my-first-blog/"/>
     <id>http://example.com/2021/10/09/my-first-blog/</id>
     <published>2021-10-09T11:03:43.000Z</published>
-    <updated>2021-10-09T11:14:20.365Z</updated>
+    <updated>2021-10-17T11:30:08.387Z</updated>
     
-    <content type="html"><![CDATA[<p>步骤1：打开注册表<br> 步骤2：打开注册表中[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5<br> 步骤3：打开注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer] 将Enabled修改为：1<br>步骤4：win+X打开管理员shell命令行<br>通过net stop w32time 停止服务<br>   net start w32time 启动服务</p><p>检测命令：w32tm /stripchart /computer:ntp_server_address<br>步骤5：添加防火墙规则<br>控制面板—&gt;系统和安全—&gt;windows防火墙—&gt;高级设置—&gt;入站规则（右键）—&gt;新建规则—&gt; 端口 —下一步—-UDP—-特定本地端口：123（不要换别的）<br>一直点下一步，直到下面这个页面名称：NTP，完成；<br>步骤6：开机自启动<br>打开服务<br>设置windows Time服务属性为自动</p>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>步骤1：打开注册表，WIN+R打开搜索框，输入regedit</p><p><img src="https://img0.baidu.com/it/u=808989156,1923249855&fm=26&fmt=auto" alt="搜索框" title="搜索框"></p></li><li><p>步骤2：打开注册表中           [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5</p></li><li><p>步骤3：打开注册表[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer] 将Enabled修改为：1 </p></li><li><p>步骤4：win+X打开管理员shell命令行 </p><pre><code>       通过net stop w32time 停止服务       net start w32time 启动服务       检测命令：w32tm /stripchart /computer:ntp_server_address</code></pre></li><li><p>步骤5：添加防火墙规则<br>控制面板—&gt;系统和安全—&gt;windows防火墙—&gt;高级设置—&gt;入站规则（右键）—&gt;新建规则—&gt; 端口 —下一步—-UDP—-特定本地端口：123（不要换别的）<br>一直点下一步，直到下面这个页面名称：NTP，完成；</p></li><li><p>步骤6：开机自启动</p><pre><code>          打开服务          设置windows Time服务属性为自动</code></pre></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;步骤1：打开注册表&lt;br&gt; 步骤2：打开注册表中[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags] AnnounceFlags 值修改为5&lt;br&gt; 步骤3：打</summary>
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;步骤1：打开注册表，WIN+R打开搜索框，输入regedit&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img0.baidu.com/it/u=808989156,1923249855&amp;fm=26&amp;fmt=auto&quot; alt=&quot;搜索框&quot; title</summary>
       
     
     
@@ -39,22 +41,26 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>自我简介</title>
     <link href="http://example.com/2021/10/09/hello-world/"/>
     <id>http://example.com/2021/10/09/hello-world/</id>
     <published>2021-10-09T08:44:39.688Z</published>
-    <updated>2021-10-09T08:44:39.688Z</updated>
+    <updated>2021-10-17T11:43:24.986Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>欢迎来到我的空间，职业：码农，主要记录自己的学习生活，写写博客，总结一下所学的经验和知识。</p><p>主题是引用这位的<a href="http://blog.geekaholic.cn/">Geekaholic</a>。</p><p>期待世界赛，LPL重铸荣光。</p><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202004%2F16%2F20200416015655_zmbwp.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637062946&t=300c692a402f1de96a39d8ec3b78ce5f" alt="LPL"></p><h2 id="HEXO-使用教程"><a href="#HEXO-使用教程" class="headerlink" title="HEXO 使用教程"></a>HEXO 使用教程</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;p&gt;欢迎来到我的空间，职业：码农，主要记录自己的学习生活，写写博客，总结一下所学的经验和知识。&lt;/p&gt;
+&lt;p&gt;主题是引用这位的&lt;a href=&quot;http://blog.geekaholic.cn/&quot;&gt;Geekaholic&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;期待世界赛，LPL重铸荣光。&lt;/</summary>
       
     
     
     
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
