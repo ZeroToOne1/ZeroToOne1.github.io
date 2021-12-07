@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-18T14:22:40.357Z</updated>
+  <updated>2021-12-07T14:20:55.954Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>性能优化</title>
+    <link href="http://example.com/2021/12/07/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E4%BC%98%E5%8C%96/"/>
+    <id>http://example.com/2021/12/07/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E4%BC%98%E5%8C%96/</id>
+    <published>2021-12-07T14:17:35.000Z</published>
+    <updated>2021-12-07T14:20:55.954Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于C-网络通信【tcp协议】"><a href="#关于C-网络通信【tcp协议】" class="headerlink" title="关于C++网络通信【tcp协议】"></a>关于C++网络通信【tcp协议】</h2><ol><li>调系统中的缓存，利用输出日志和linux命令统计buffer，并在excel中作图表化分析和对比。 调节socket缓存</li><li>查看底层的内存管理（看跑代码的平台，是linux还是windows，系统中用到的是哪种内存分配方法），可以追更溯源到new/malloc函数是哪个库调用的，比如linux编译器Gnu默认用glibc库的malloc进行内存分配，所谓ptmalloc。但还有比ptmalloc更好的算法：tcmalloc以及jemalloc。它们各有优缺点，且经过业界大量实践，可以根据各自特点来优化自己的系统。</li><li>由于是传输网络数据和通信的系统，有涉及到ace_messageblock类（封装了用来网络传输的消息体，有共享底层数据块的功能实现，有点像共享指针）。</li><li>利用日志分析底层库队列、应用层队列、时延等指标，找到需要优化的指标再进行针对优化。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;关于C-网络通信【tcp协议】&quot;&gt;&lt;a href=&quot;#关于C-网络通信【tcp协议】&quot; class=&quot;headerlink&quot; title=&quot;关于C++网络通信【tcp协议】&quot;&gt;&lt;/a&gt;关于C++网络通信【tcp协议】&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;调系统中的缓存，利用</summary>
+      
+    
+    
+    
+    <category term="网络通信" scheme="http://example.com/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"/>
+    
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>编译原理LR1分析法</title>

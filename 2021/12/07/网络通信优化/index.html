@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>git命令 | ZeroToOne1&#39;s Room</title>
+<title>性能优化 | ZeroToOne1&#39;s Room</title>
 
 <link rel="alternate" href="/atom.xml" title="ZeroToOne1&#39;s Room" type="application/atom+xml">
 
@@ -168,9 +168,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="git命令">
+            <h1 id="性能优化">
                 
-                git命令
+                性能优化
                 
             </h1>
             <div class="article-meta">
@@ -178,7 +178,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>技术积累</span>
+        <span>网络通信</span>
     </span>
     
     
@@ -186,7 +186,7 @@
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            git命令
+            C++
             
         </span>
     </span>
@@ -194,14 +194,14 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2021/10/18</span>
+        <span class="date-meta ">2021/12/07</span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="git命令"
-              data-leadcloud-url="/2021/10/18/git%E5%91%BD%E4%BB%A4/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="性能优化"
+              data-leadcloud-url="/2021/12/07/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E4%BC%98%E5%8C%96/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -212,17 +212,12 @@
         </div>
         
         <div id="post-body">
-            <p>﻿### GIT命令行提交到gihub</p>
-<p>git init</p>
-<p>检查加密传输是否设置：ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a></p>
-<p>git pull origin master<br>$ git remote add origin git@github:你的github远程地址.git<br>输入命令行<br>`$ git add .<br>//注意add后面是有”.“的，而且和add之间有一个空格<br>$ git commit -m “提交说明”</p>
-<p>$ git push origin master</p>
-<p>移除原来设置的远程地址：git remote rm origin<br>再重新用git remote add origin git@github:你的github远程地址.git设置再重复上述提交步骤。</p>
-<h3 id="使用git-LFS提交大文件"><a href="#使用git-LFS提交大文件" class="headerlink" title="使用git LFS提交大文件"></a>使用git LFS提交大文件</h3><p>git lfs track “*.zip”<br>git add .gitattributes<br>cat .gitattributes  #自动生成的文件，需一并提交到 Git，否则 Clone 项目的时候 Git LFS 不起作用</p>
-<p>git add 提交文件名<br>git commit -m ‘xxx’<br>git push </p>
-<p>删除提交记录：<br>git log<br>得出记录名字</p>
-<p>git reset –hard 记录ID</p>
-<p>git push origin HEAD –force</p>
+            <h2 id="关于C-网络通信【tcp协议】"><a href="#关于C-网络通信【tcp协议】" class="headerlink" title="关于C++网络通信【tcp协议】"></a>关于C++网络通信【tcp协议】</h2><ol>
+<li>调系统中的缓存，利用输出日志和linux命令统计buffer，并在excel中作图表化分析和对比。 调节socket缓存</li>
+<li>查看底层的内存管理（看跑代码的平台，是linux还是windows，系统中用到的是哪种内存分配方法），可以追更溯源到new/malloc函数是哪个库调用的，比如linux编译器Gnu默认用glibc库的malloc进行内存分配，所谓ptmalloc。但还有比ptmalloc更好的算法：tcmalloc以及jemalloc。它们各有优缺点，且经过业界大量实践，可以根据各自特点来优化自己的系统。</li>
+<li>由于是传输网络数据和通信的系统，有涉及到ace_messageblock类（封装了用来网络传输的消息体，有共享底层数据块的功能实现，有点像共享指针）。</li>
+<li>利用日志分析底层库队列、应用层队列、时延等指标，找到需要优化的指标再进行针对优化。</li>
+</ol>
 
         </div>
         <div id="post-footer">
@@ -244,20 +239,20 @@
                     <a href="/about.html">liuyx</a>
                 </li>
                 
-                <li>发表日期: <span>2021-10-18  22:16:33</span></li>
+                <li>发表日期: <span>2021-12-07  22:17:35</span></li>
                 
-                <li>最后编辑日期: <span>2021-10-18  22:19:26</span></li>
+                <li>最后编辑日期: <span>2021-12-07  22:20:55</span></li>
                 
                 <li class="post-category">
                     文章分类:
                     
-                    <a href="/categories/%E6%8A%80%E6%9C%AF%E7%A7%AF%E7%B4%AF/">技术积累</a>
+                    <a href="/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a>
                     
                 </li>
                 <li class="post-tags">
                     文章标签:
                     
-                    <a href="/tags/git%E5%91%BD%E4%BB%A4/">git命令</a>
+                    <a href="/tags/C/">C++</a>
                     
                 </li>
                 
@@ -280,10 +275,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2021/10/18/Unity2d%E4%B8%ADA-%E7%AE%97%E6%B3%95%E5%BA%94%E7%94%A8/" class="pre-post fa fa-caret-left">Unity2d中A*算法应用</a>
         
-        
-        <a href="/2021/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="next-post fa">计算机网络</a>
+        <a href="/2021/10/18/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86LR1%E5%88%86%E6%9E%90%E6%B3%95-1/" class="next-post fa">编译原理LR1分析法</a>
         
     </div>
     
@@ -361,7 +354,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8git-LFS%E6%8F%90%E4%BA%A4%E5%A4%A7%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">使用git LFS提交大文件</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8EC-%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E3%80%90tcp%E5%8D%8F%E8%AE%AE%E3%80%91"><span class="toc-number">1.</span> <span class="toc-text">关于C++网络通信【tcp协议】</span></a></li></ol>
 
 
     
