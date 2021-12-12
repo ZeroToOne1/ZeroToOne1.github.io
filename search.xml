@@ -29,6 +29,42 @@
     </entry>
     
     <entry>
+        <title><![CDATA[自我简介]]></title>
+        <url>http://example.com/2021/10/19/hello-world/</url>
+        <content type="html"><![CDATA[<p>欢迎来到我的空间，职业：码农，主要记录自己的学习生活，写写博客，总结一下所学的经验和知识。</p>
+<p>主题是引用这位的<a href="http://blog.geekaholic.cn/">Geekaholic</a>。</p>
+<p>期待世界赛，LPL重铸荣光。</p>
+<p><img src="https://gimg0.baidu.com/gimg/src=https%3A%2F%2Fgameplus-platform.cdn.bcebos.com%2Fgameplus-platform%2Fupload%2Ffile%2Fsource%2Ffec1ca04888967e73ed66546f09fb6b5.png&app=2000&size=f9999,10000&n=0&g=0n&q=70&fmt=jpeg?sec=0&t=ecbd8422618aa05f1563238e2b0404c6" alt="LPL"></p>
+<h2 id="HEXO-使用教程"><a href="#HEXO-使用教程" class="headerlink" title="HEXO 使用教程"></a>HEXO 使用教程</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+        
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 其他 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[编译原理LR1分析法]]></title>
         <url>http://example.com/2021/10/18/%25E7%25BC%2596%25E8%25AF%2591%25E5%258E%259F%25E7%2590%2586LR1%25E5%2588%2586%25E6%259E%2590%25E6%25B3%2595-1/</url>
         <content type="html"><![CDATA[<h1 id="编译原理实验报告"><a href="#编译原理实验报告" class="headerlink" title="编译原理实验报告"></a>编译原理实验报告</h1><h2 id="开发工具：JAVA10"><a href="#开发工具：JAVA10" class="headerlink" title="开发工具：JAVA10"></a>开发工具：JAVA10</h2><h2 id="开发环境：Eclipse-19-03版"><a href="#开发环境：Eclipse-19-03版" class="headerlink" title="开发环境：Eclipse 19.03版"></a>开发环境：Eclipse 19.03版</h2><h2 id="写代码体会"><a href="#写代码体会" class="headerlink" title="写代码体会"></a>写代码体会</h2><p>  <em>首先第三次实验验收不尽人意，老师就大致浏览了一遍就验收完了，自己写了3，4天的代码，他问都不问，我真的服！</em><br>让我们回到点子上，说到LR1分析法，我大致整理一下求项目集族的算法思想，其实跟书上的思路差不多。现整理一下写分析器需要解决的问题：<br> 1.首先是解决如何表示文法的项目，就是选择<strong>数据结构</strong>；</p>
@@ -143,7 +179,7 @@
     
     <entry>
         <title><![CDATA[Windows设置NTP时间]]></title>
-        <url>http://example.com/2021/10/09/my-first-blog/</url>
+        <url>http://example.com/2021/10/09/Windows%25E8%25AE%25BE%25E7%25BD%25AENTP%25E6%2597%25B6%25E9%2597%25B4/</url>
         <content type="html"><![CDATA[<ul>
 <li><p>步骤1：打开注册表，WIN+R打开搜索框，输入regedit</p>
 <p><img src="https://img0.baidu.com/it/u=808989156,1923249855&fm=26&fmt=auto" alt="搜索框" title="搜索框"></p>
@@ -185,7 +221,7 @@
     
     <entry>
         <title><![CDATA[自我简介]]></title>
-        <url>http://example.com/2021/10/09/hello-world/</url>
+        <url>http://example.com/2021/10/09/%25E8%2587%25AA%25E6%2588%2591%25E7%25AE%2580%25E4%25BB%258B/</url>
         <content type="html"><![CDATA[<p>欢迎来到我的空间，职业：码农，主要记录自己的学习生活，写写博客，总结一下所学的经验和知识。</p>
 <p>主题是引用这位的<a href="http://blog.geekaholic.cn/">Geekaholic</a>。</p>
 <p>期待世界赛，LPL重铸荣光。</p>
